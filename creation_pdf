@@ -8,7 +8,7 @@ command -v $CMD >/dev/null 2>&1 || { echo "Please install $CMD." >&2; exit 1; }
 
 mkdir -p $OUTPUT
 mkdir -p $OUTPUTPNG
-if [ $#>0 ]
+if [ $# -gt 0 ]
 then
 	FILES=$*
 else
@@ -16,6 +16,7 @@ else
 fi
 
 for HTML in $FILES; do
+
 BASE=$(basename "$HTML")
 $CMD --javascript-delay 15000 $HTML $OUTPUT/${BASE%.*}.pdf
 #gs -dNOPAUSE -dBATCH -dPDFFitPage -dDOINTERPOLATE -sDEVICE=pngalpha -g1630x2220 -sOutputFile=$OUTPUTPNG/${BASE%.*}.png $OUTPUT/${BASE%.*}.pdf
