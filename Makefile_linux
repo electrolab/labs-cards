@@ -1,0 +1,21 @@
+EAGLE_CMD := /opt/eagle-6.5.0/bin/eagle 
+BUILDDIR := build
+docs := $(patsubst src/%.html,$(BUILDDIR)/%.pdf,$(wildcard src/*.html))
+SCH := $(shell mktemp -u image.png.XXXXXX)
+
+
+all: $(BUILDDIR) $(docs)
+
+build/%.pdf: src/%.html src/images/%.png src/static/main.css
+		wkhtmltopdf --redirect-delay 15000 $< $@ --page-width 276
+
+cards.pdf: $(BUILDDIR)/*.pdf $(docs)
+		"/System/Library/Automator/Combine PDF Pages.action/Contents/Resources/join.py" -o cards.pdf $(BUILDDIR)/*.pdf
+
+src/images/%.png: schematics/%.sch
+		$(EAGLE_CMD) -C "export image /tmp/$(SCH) 600; quit;" "$(CURDIR)/$<"
+		convert /tmp/$(SCH).png -threshold 75% $@
+		rm /tmp/$(SCH).png
+
+$(BUILDDIR):
+	mkdir -p $(BUILDDIR)

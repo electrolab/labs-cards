@@ -41,7 +41,7 @@ h1 {
     padding: 4mm 2mm 0 0;
     font-family: Orbitron;
     font-variant: small-caps;
-    font-size: 17mm;
+    font-size: 16mm;
     text-align: right;
 }
 
@@ -73,7 +73,7 @@ h1 {
     height: 117mm;
     left: 32mm;
     right: 32mm;
-    font-size: 8.2mm;
+    font-size: 7.5mm;
     font-family: Helvetica, sans-serif;
     padding: 1mm 4mm;
 }
@@ -90,7 +90,7 @@ img.equation {
 #cardno {
     position: absolute;
     top: 333mm;
-    left: 97mm;
+    left: 107mm;
     width: 24mm;
     font-family: Orbitron;
     font-size: 15mm;
@@ -100,7 +100,7 @@ img.equation {
 #totalcards {
     position: absolute;
     top: 333mm;
-    right: 97mm;
+    right: 107mm;
     width: 24mm;
     font-family: Orbitron;
     font-size: 15mm;

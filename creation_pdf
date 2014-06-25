@@ -1,0 +1,27 @@
+#!/bin/bash
+
+#CMD=wkhtmltopdf
+CMD=html2pdf
+OUTPUT=pdf
+OUTPUTPNG=png
+command -v $CMD >/dev/null 2>&1 || { echo "Please install $CMD." >&2; exit 1; }
+
+mkdir -p $OUTPUT
+mkdir -p $OUTPUTPNG
+if [ $#>0 ]
+then
+	FILES=$*
+else
+	FILES=src/*.html
+fi
+
+for HTML in $FILES; do
+BASE=$(basename "$HTML")
+$CMD --javascript-delay 15000 $HTML $OUTPUT/${BASE%.*}.pdf
+#gs -dNOPAUSE -dBATCH -dPDFFitPage -dDOINTERPOLATE -sDEVICE=pngalpha -g1630x2220 -sOutputFile=$OUTPUTPNG/${BASE%.*}.png $OUTPUT/${BASE%.*}.pdf
+gs -dNOPAUSE -dBATCH -dPDFFitPage -dDOINTERPOLATE -sDEVICE=pngalpha -g815x1110 -sOutputFile=$OUTPUTPNG/${BASE%.*}.png $OUTPUT/${BASE%.*}.pdf
+done
+
+
+# ghostscript needed to merge all pdfs into one
+rm pdf/all.pdf; gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=pdf/all.pdf pdf/*.pdf
