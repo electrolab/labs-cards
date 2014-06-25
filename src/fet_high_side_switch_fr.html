@@ -1,0 +1,18 @@
+<html id="power">
+<head>
+  <link rel="stylesheet" type="text/css" href="static/main.css" />
+</head>
+<body>
+    <h1>Switch High-side</h1>
+    <div id="image">
+        <img src="images/fet_high_side_switch.png" />
+    </div>
+    <div id="description">
+        <p>Quand vous faites de la commutation de puissance, il est souvent n&eacute;cessaire de commander une tension plus importante (ex. 12v) que la tension de logique (ex. 5v). Ce n'est pas faisable avec un simple MOSFET &agrave; canal P parce que la tension de la logique n'est pas suffisante pour d&eacute;sactiver le PFET. Ce circuit r&eacute;sout ce probl&egrave;me en utilisant un second MOSFET &agrave; canal N.</p>
+
+        <p>Quand l'entr&eacute;e est au niveau bas, Q1 n'est pas passant, et la grille de Q2 est forc&eacute;e &agrave; VCC par la r&eacute;sistance de pull-up R1. Quand l'entr&eacute;e passe au niveau haut, Q1 devient passant et force la grille de Q2 &agrave; la masse, ce qui le rend passant.</p>
+    </div>
+    <div id="cardno">27</div>
+    <div id="totalcards">32</div>
+</body>
+</html>
