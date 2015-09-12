@@ -31,14 +31,13 @@ LIBS:contrib
 LIBS:valves
 LIBS:Diodes
 LIBS:TransistorParts
-LIBS:cmos_inverter-cache
 EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "12 sep 2015"
+Date "8 sep 2015"
 Rev ""
 Comp ""
 Comment1 ""
@@ -47,7 +46,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L ZENER ~
+L ZENER 1
 U 1 1 55EF4BB8
 P 3800 2900
 F 0 " " H 3800 3000 50  0000 C CNN
@@ -58,7 +57,7 @@ F 3 "~" H 3800 2900 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L ZENER ~
+L ZENER 1
 U 1 1 55EF4BC7
 P 3800 4100
 F 0 " " H 3800 4200 50  0000 C CNN
@@ -92,7 +91,7 @@ F 3 "~" H 3450 2900 60  0000 C CNN
 $EndComp
 Text GLabel 2750 3500 0    60   Input ~ 0
 in
-Text GLabel 4000 3500 2    60   Output ~ 0
+Text GLabel 4200 3500 2    60   Output ~ 0
 out
 $Comp
 L GND #PWR?
@@ -117,43 +116,31 @@ F 3 "" H 3650 2500 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3550 2700 3650 2700
+	3550 2700 3800 2700
 Wire Wire Line
-	3650 2700 3800 2700
-Wire Wire Line
-	3550 3100 3650 3100
-Wire Wire Line
-	3650 3100 3800 3100
+	3550 3100 3800 3100
 Wire Wire Line
 	3650 2500 3650 2700
 Connection ~ 3650 2700
 Wire Wire Line
 	3250 2900 3100 2900
 Wire Wire Line
-	3100 2900 3100 3500
-Wire Wire Line
-	3100 3500 3100 4100
+	3100 2900 3100 4100
 Wire Wire Line
 	3100 4100 3250 4100
 Wire Wire Line
 	2750 3500 3100 3500
 Connection ~ 3100 3500
 Wire Wire Line
-	3550 3900 3650 3900
+	3550 3900 3800 3900
 Wire Wire Line
-	3650 3900 3800 3900
+	3550 4300 3800 4300
 Wire Wire Line
-	3550 4300 3650 4300
-Wire Wire Line
-	3650 4300 3800 4300
-Wire Wire Line
-	3650 3100 3650 3500
-Wire Wire Line
-	3650 3500 3650 3900
+	3650 3100 3650 3900
 Connection ~ 3650 3900
 Connection ~ 3650 3100
 Wire Wire Line
-	4000 3500 3650 3500
+	4200 3500 3650 3500
 Connection ~ 3650 3500
 Wire Wire Line
 	3650 4500 3650 4300
