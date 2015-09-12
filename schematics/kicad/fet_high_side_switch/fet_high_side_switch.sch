@@ -1,0 +1,161 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:TransistorParts
+LIBS:fet_high_side_switch-cache
+EELAYER 27 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "12 sep 2015"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MOSFET_P Q1
+U 1 1 55F4488C
+P 3000 2850
+F 0 "Q1" H 3000 3040 60  0000 R CNN
+F 1 " " H 3000 2670 60  0000 R CNN
+F 2 "~" H 3000 2850 60  0000 C CNN
+F 3 "~" H 3000 2850 60  0000 C CNN
+	1    3000 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L ZENER 1
+U 1 1 55F448B4
+P 3550 1250
+F 0 " " H 3550 1350 50  0000 C CNN
+F 1 " " H 3550 1150 40  0000 C CNN
+F 2 "~" H 3550 1250 60  0000 C CNN
+F 3 "~" H 3550 1250 60  0000 C CNN
+	1    3550 1250
+	-1   0    0    1   
+$EndComp
+$Comp
+L ZENER 1
+U 1 1 55F448C3
+P 3400 2850
+F 0 " " H 3400 2950 50  0000 C CNN
+F 1 " " H 3400 2750 40  0000 C CNN
+F 2 "~" H 3400 2850 60  0000 C CNN
+F 3 "~" H 3400 2850 60  0000 C CNN
+	1    3400 2850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R1
+U 1 1 55F448D2
+P 3100 1950
+F 0 "R1" V 3180 1950 40  0000 C CNN
+F 1 "100K" V 3107 1951 40  0000 C CNN
+F 2 "~" V 3030 1950 30  0000 C CNN
+F 3 "~" H 3100 1950 30  0000 C CNN
+	1    3100 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L MOSFET_P Q2
+U 1 1 55F449DC
+P 3550 1550
+F 0 "Q2" H 3550 1740 60  0000 R CNN
+F 1 " " H 3550 1370 60  0000 R CNN
+F 2 "~" H 3550 1550 60  0000 C CNN
+F 3 "~" H 3550 1550 60  0000 C CNN
+	1    3550 1550
+	0    1    -1   0   
+$EndComp
+$Comp
+L VDD #PWR?
+U 1 1 55F449FE
+P 3100 1150
+F 0 "#PWR?" H 3100 1250 30  0001 C CNN
+F 1 "VDD" H 3100 1260 30  0000 C CNN
+F 2 "" H 3100 1150 60  0000 C CNN
+F 3 "" H 3100 1150 60  0000 C CNN
+	1    3100 1150
+	1    0    0    -1  
+$EndComp
+Text GLabel 2600 2850 0    60   Input ~ 0
+in
+Text GLabel 4000 1450 2    60   Output ~ 0
+out
+$Comp
+L GND #PWR?
+U 1 1 55F44A71
+P 3100 3250
+F 0 "#PWR?" H 3100 3250 30  0001 C CNN
+F 1 "GND" H 3100 3180 30  0001 C CNN
+F 2 "" H 3100 3250 60  0000 C CNN
+F 3 "" H 3100 3250 60  0000 C CNN
+	1    3100 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 1450 4000 1450
+Wire Wire Line
+	3750 1250 3900 1250
+Wire Wire Line
+	3900 1250 3900 1450
+Connection ~ 3900 1450
+Wire Wire Line
+	3350 1450 3100 1450
+Wire Wire Line
+	3100 1150 3100 1700
+Wire Wire Line
+	3350 1250 3300 1250
+Wire Wire Line
+	3300 1250 3300 1450
+Connection ~ 3300 1450
+Connection ~ 3100 1450
+Wire Wire Line
+	3100 2200 3100 2650
+Wire Wire Line
+	3550 1750 3550 2300
+Wire Wire Line
+	3550 2300 3100 2300
+Connection ~ 3100 2300
+Wire Wire Line
+	3100 2650 3400 2650
+Wire Wire Line
+	3400 3050 3100 3050
+Wire Wire Line
+	3100 3050 3100 3250
+Wire Wire Line
+	2600 2850 2800 2850
+$EndSCHEMATC
