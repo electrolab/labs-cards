@@ -1,0 +1,216 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:ok-relay
+LIBS:74xx-eu
+EELAYER 27 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "19 sep 2015"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CP1 C1
+U 1 1 55FD6863
+P 3950 1450
+F 0 "C1" H 4000 1550 50  0000 L CNN
+F 1 " " H 4000 1350 50  0000 L CNN
+F 2 "~" H 3950 1450 60  0000 C CNN
+F 3 "~" H 3950 1450 60  0000 C CNN
+	1    3950 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C2
+U 1 1 55FD689F
+P 5450 1450
+F 0 "C2" H 5500 1550 50  0000 L CNN
+F 1 " " H 5500 1350 50  0000 L CNN
+F 2 "~" H 5450 1450 60  0000 C CNN
+F 3 "~" H 5450 1450 60  0000 C CNN
+	1    5450 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR?
+U 1 1 55FD6A2F
+P 2800 1150
+F 0 "#PWR?" H 2800 1250 30  0001 C CNN
+F 1 "VCC" H 2800 1250 30  0000 C CNN
+F 2 "" H 2800 1150 60  0000 C CNN
+F 3 "" H 2800 1150 60  0000 C CNN
+	1    2800 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR?
+U 1 1 55FD6A3E
+P 5050 1400
+F 0 "#PWR?" H 5050 1500 30  0001 C CNN
+F 1 "VCC" H 5050 1500 30  0000 C CNN
+F 2 "" H 5050 1400 60  0000 C CNN
+F 3 "" H 5050 1400 60  0000 C CNN
+	1    5050 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 55FD6A5C
+P 5150 2050
+F 0 "#PWR?" H 5150 2050 30  0001 C CNN
+F 1 "GND" H 5150 1980 30  0001 C CNN
+F 2 "" H 5150 2050 60  0000 C CNN
+F 3 "" H 5150 2050 60  0000 C CNN
+	1    5150 2050
+	1    0    0    -1  
+$EndComp
+Text GLabel 5850 1250 2    60   Output ~ 0
+out
+$Comp
+L REL-DPST-NO 1
+U 1 1 55FD70EE
+P 3350 1450
+F 0 " " H 3350 1850 60  0000 C CNN
+F 1 " " H 3350 1100 60  0000 C CNN
+F 2 "" H 3350 1450 60  0000 C CNN
+F 3 "" H 3350 1450 60  0000 C CNN
+	1    3350 1450
+	1    0    0    1   
+$EndComp
+$Comp
+L 7416D IC1
+U 1 1 55FD712D
+P 3450 2350
+F 0 "IC1" H 3550 2475 50  0000 L BNN
+F 1 "7416D" H 3550 2150 50  0000 L BNN
+F 2 "74xx-eu-SO14" H 3450 2500 50  0001 C CNN
+F 3 "" H 3450 2350 60  0000 C CNN
+	1    3450 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L REL-DPST-NO 1
+U 1 1 55FD7185
+P 4700 1450
+F 0 " " H 4700 1850 60  0000 C CNN
+F 1 " " H 4700 1100 60  0000 C CNN
+F 2 "" H 4700 1450 60  0000 C CNN
+F 3 "" H 4700 1450 60  0000 C CNN
+	1    4700 1450
+	1    0    0    1   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 55FD71A4
+P 2800 2000
+F 0 "#PWR?" H 2800 2000 30  0001 C CNN
+F 1 "GND" H 2800 1930 30  0001 C CNN
+F 2 "" H 2800 2000 60  0000 C CNN
+F 3 "" H 2800 2000 60  0000 C CNN
+	1    2800 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 55FD71B3
+P 3750 2000
+F 0 "#PWR?" H 3750 2000 30  0001 C CNN
+F 1 "GND" H 3750 1930 30  0001 C CNN
+F 2 "" H 3750 2000 60  0000 C CNN
+F 3 "" H 3750 2000 60  0000 C CNN
+	1    3750 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 1150 2800 1250
+Wire Wire Line
+	2800 1250 3050 1250
+Wire Wire Line
+	2800 1450 2800 2000
+Wire Wire Line
+	3050 1450 2800 1450
+Wire Wire Line
+	3050 1750 3050 2350
+Text GLabel 2800 2350 0    60   UnSpc ~ 0
+clk
+Wire Wire Line
+	3050 2350 2800 2350
+Wire Wire Line
+	3650 1250 4400 1250
+Wire Wire Line
+	3650 1450 3750 1450
+Wire Wire Line
+	3750 1450 3750 1650
+Wire Wire Line
+	3750 1650 4250 1650
+Wire Wire Line
+	4250 1650 4250 1450
+Wire Wire Line
+	4250 1450 4400 1450
+Wire Wire Line
+	3650 1750 3750 1750
+Wire Wire Line
+	3750 1750 3750 2000
+Wire Wire Line
+	3850 2350 4250 2350
+Wire Wire Line
+	4250 2350 4250 1750
+Wire Wire Line
+	4250 1750 4400 1750
+Wire Wire Line
+	5000 1750 5100 1750
+Wire Wire Line
+	5100 1750 5100 1950
+Wire Wire Line
+	5100 1950 5450 1950
+Wire Wire Line
+	5150 1950 5150 2050
+Wire Wire Line
+	5450 1950 5450 1650
+Connection ~ 5150 1950
+Wire Wire Line
+	5000 1250 5850 1250
+Connection ~ 5450 1250
+Connection ~ 3950 1250
+Connection ~ 3950 1650
+Wire Wire Line
+	5000 1450 5050 1450
+Wire Wire Line
+	5050 1450 5050 1400
+$EndSCHEMATC
